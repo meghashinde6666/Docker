@@ -1,0 +1,37 @@
+                            dy = -gridSize;
+                        }
+                        break;
+                    case 'ArrowDown':
+                        if (dy === 0) {
+                            dx = 0;
+                            dy = gridSize;
+                        }
+                        break;
+                    case 'ArrowLeft':
+                        if (dx === 0) {
+                            dx = -gridSize;
+                            dy = 0;
+                        }
+                        break;
+                    case 'ArrowRight':
+                        if (dx === 0) {
+                            dx = gridSize;
+                            dy = 0;
+                        }
+                        break;
+                }
+            });
+
+            // Restart game
+            restartBtn.addEventListener('click', () => {
+                initGame();
+                gameLoop();
+            });
+
+            // Start game
+            initGame();
+            gameLoop();
+        });
+    </script>
+</body>
+</html>
